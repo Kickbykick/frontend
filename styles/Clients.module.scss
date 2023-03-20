@@ -1,0 +1,49 @@
+@import "./styles/variables.scss";
+
+.clients{
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__middle_section{
+        padding: 20px 20px 20px 20px;
+        background: #E9E9E9;;
+
+        &__header{
+            padding: 20px 20px 20px 20px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 56px;
+            color: #000000;
+            text-align: center;
+        }
+
+        &__body{
+            padding: 20px 20px 20px 20px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 162.69%;
+            /* or 33px */
+
+            text-align: center;
+            letter-spacing: -0.01em;
+
+            color: #000000;
+        }
+    }
+
+    &__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 37px;
+        line-height: 43px;
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,50 @@
+@import "./styles/variables.scss";
+
+.whoarewe{
+    height: 64px;
+    width: 100%;
+    background: #760F0D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content{
+        background: #fff;
+
+        &__text{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 37px;
+            line-height: 43px;
+            color: #FFFFFF;
+        }
+    }
+
+    &__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 37px;
+        line-height: 43px;
+        color: #FFFFFF;
+    }
+}
+
+.whatwedo{
+    height: 64px;
+    width: 100%;
+    background: #D5B400;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 37px;
+        line-height: 43px;
+        color: #FFFFFF;
+    }
+}

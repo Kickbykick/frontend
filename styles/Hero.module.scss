@@ -1,0 +1,17 @@
+@import "./styles/variables.scss";
+
+.container {
+    height: calc(100vh - #{$navbarHeight});
+    background: #3d3831;
+    background-blend-mode: color-burn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+
+    h1 {
+        padding: 1.5rem 2.5rem;
+        background: linear-gradient(90deg, #E28400 0%, rgba(141, 141, 141, 0) 60.42%);
+        background-blend-mode: color-burn;
+    }
+}
