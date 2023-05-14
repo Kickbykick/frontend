@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className={classes.footer}>
         <p className={classes.footer__content}>
-            Copyright &copy; {new Date().getFullYear()} Tabula Rasa. All Rights Reserved.
+            Copyright &copy; {new Date().getFullYear()} iDDt Studios. All Rights Reserved.
         </p>
     </div>
   )

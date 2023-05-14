@@ -1,40 +1,133 @@
 @import "./styles/variables.scss";
 
+.clientsheroWrapper {
+    position: relative;
+    // width: 100vw;
+    height: max(100vh, 760px);
+}
+
 .clients{
     width: 100%;
+    height: 100%;
     background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     &__middle_section{
-        padding: 20px 20px 20px 20px;
         background: #E9E9E9;;
+        height: 100%;
+        width: 100%;
+
+        // @include media( "screen", "<bp1Width" ){
+        //     height: max(60%, 500px);
+        // };
+
+        &__imagecontainer{
+            display: flex;
+            height: 100%;
+            position: relative;
+            text-align: center;
+
+            // @include media( "screen", "<bp1Width" ){
+            //     height: max(60%, 500px);
+            // };
+        }
+
+        &__tinted {    
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__horizontallinemargintop {    
+            margin-top: 50px;
+        }
+
+        &__horizontalline {    
+            background-color: rgb(0, 0, 0);
+            width: 90%;
+            display: flex;
+            margin: 0 auto;
+            border: 1px solid #FFFFFF;
+
+            @include media( "screen", "<bp1Width" ){
+                display: none;
+            };
+        }
+
+        &__textonimage{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            // padding: 20px;
+        }
+
+        &__image{
+            width: 100%;
+            object-fit: cover;
+            z-index: 0;
+
+            @include media( "screen", "<bp1Width" ){
+                height: max(50vh, 500px);
+            };
+            @include media( "screen", "<minWidthLowest" ){
+                height: max(100vh, 650px);
+            };
+            @include media( "screen", "<minWidthLowestLow" ){
+                height: max(100vh, 1300px);
+            };
+        }
+
+        &__icons{
+            position: relative;
+            width: 40%;
+            margin-top: 50px;
+            @include media( "screen", "<bpTabletWidth" ){
+                width: 60%;
+            };
+            @include media( "screen", "<minWidth" ){
+                width: 80%;
+            };
+        }
 
         &__header{
-            padding: 20px 20px 20px 20px;
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 56px;
-            color: #000000;
+            padding: 0 20px;
+            color: white;
             text-align: center;
+            margin-top: min(8em, 200px);
+            margin-bottom: min(2rem, 40px);
+
+            @include media( "screen", "<maxWidth" ){
+                margin-top: min(4em, 100px);
+            };
+
+            @include media( "screen", "<bp1Width" ){
+                text-align: left;
+                border-left: 3px solid white;
+                margin-left: 20px;
+            };
         }
 
         &__body{
-            padding: 20px 20px 20px 20px;
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 162.69%;
-            /* or 33px */
-
+            padding: 0 20px;
             text-align: center;
-            letter-spacing: -0.01em;
+            color: white;
+            margin-bottom: min(8em, 200px);
 
-            color: #000000;
+            @include media( "screen", "<maxWidth" ){
+                margin-bottom: min(4em, 100px);
+            };
+
+            @include media( "screen", "<bp1Width" ){
+                text-align: left;
+            };
         }
     }
 
@@ -46,4 +139,21 @@
         line-height: 43px;
         color: #FFFFFF;
     }
+}
+
+.client_carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+    @include media( "screen", "<maxWidth" ){
+        width: 60%;
+    };
+}
+
+.vl {
+    border-left: 2px solid #000000;
+    height: 90%;
 }

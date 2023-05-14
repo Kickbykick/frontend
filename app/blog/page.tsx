@@ -1,23 +1,25 @@
 import React from 'react'
-import BlogDisplay from './BlogDisplay';
 import classes from './../../styles/blog/Blog.module.scss';
+import { blog } from "../../public";
 
 function Blog() {
   return (
-    <div className={classes.blog}>
-      <div className={classes.blog__mainheadertext}>
-        Blog
-      </div>
-
-      <hr className={classes.blog__horizontal}/>
-
-      <div className={classes.blog__section}>
-        <BlogDisplay />
-        <BlogDisplay />
-        <BlogDisplay />
-        <BlogDisplay />
-      </div>
-    </div>
+    <>
+      <section className={classes.blog}>
+        <div className={classes.blog__imagecontainer}>
+          <img src={blog.src} alt="Who are we image" className={classes.blog__image}/>
+          <div className={classes.blog__tinted}></div>
+          <h1 className={classes.blog__mainheadertext}>
+            Blogs.
+          </h1>
+        </div> 
+      </section>
+      <section className={classes.blog__section}>
+        <p className={classes.blog__section__text}>
+          No current blogs 🌚🌚
+        </p>
+      </section>
+    </>
   )
 }
 

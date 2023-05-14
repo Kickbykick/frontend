@@ -1,43 +1,48 @@
 import React from 'react';
 import classes from './../../styles/products/Products.module.scss';
+import { product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10 } from "./../../public";
+
 
 function Product() {
   return (
     <>
-      <div className={classes.products}>
-        <div className={classes.products__header}>
-          The journey starts and ends here.
+      <section className={classes.products}>
+        <div className={classes.products__container}>
+          <h1 className={classes.products__header}>
+            Our Work.
+          </h1>
+
+          <p className={classes.products__body}>
+            Elevate your business with smart strategies and innovative visual solutions to create a cohesive brand experience perfectly tailored to your unique clientele. Our attention to detail, modern aesthetic and clear execution bring your brand and vision to life.
+          </p>
         </div>
 
-        <hr className={classes.products__horizonal}/>
+        <hr className='bg-black h-1 mt-10'></hr>
+      </section>
 
-        <hr className={`${classes.products__horizonal} w-full`}/>
+      <section className={classes.products__section}>
+        <IndividualProduct image={product_1.src}/>
+        <IndividualProduct image={product_2.src}/>
+        <IndividualProduct image={product_3.src}/>
+        <IndividualProduct image={product_4.src}/>
+        <IndividualProduct image={product_5.src}/>
+        <IndividualProduct image={product_6.src}/>
+        <IndividualProduct image={product_7.src}/>
+        <IndividualProduct image={product_8.src}/>
+        <IndividualProduct image={product_9.src}/>
+        <IndividualProduct image={product_10.src}/>
+      </section>
 
-        <div>
-        </div>
-
-        <div className={classes.products__body}>
-          Elevate your business with smart strategies and innovative visual solutions to create a cohesive brand experience perfectly tailored to your unique clientele. Our attention to detail, modern aesthetic and clear execution bring your brand and vision to life.
-        </div>
-
-        <div className={classes.products__section}>
-          <IndividualProduct />
-          <IndividualProduct />
-          <IndividualProduct />
-          <IndividualProduct />
-        </div>
-      </div>
+      <div className='h-10'></div>
     </>
   )
 }
 
-function IndividualProduct() {
+function IndividualProduct(props: any) {
   return (
     <>
       <div className={classes.products__individual_products}>
-        <p className={classes.products__individual_products__text}>
-          Web Page
-        </p>
+        <img src={props.image} alt="Product Image" className={classes.products__section__image}/>
       </div>
     </>
   )

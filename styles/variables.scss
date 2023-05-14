@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+// @import "compass/css3";
 
-$TextFamilyVar: "Roboto", sans-serif;
+// Fonts
+$TextFamilyVar: 'Roboto', 'Helvetica';
+$heroBiggerFont: clamp(7rem, 9.89vw + 1.5625rem , 215px);
+$heroFont: clamp(5rem, 5.2vw + 1.75rem , 148px);
+$h1Font: clamp(3rem, 3.125VW + 0.9375rem, 80px);
+$h3Font: clamp(40px, 1.6vw + 1.125rem , 55px);
+// $subheadingFont: clamp();
+$pFont: clamp(18px, 0.6vw + 0.5rem , 24px);
+// $smallFont: clamp();
+$sideImageSize: clamp(400px, 38vw, 750px);
+
+$fontSize: 19px;
+$lineWidth: 1px;
+$xPadding: 10px;
 
 // colors
+$blackColor: #000000;
 $dark: rgb(29, 29, 29);
-$light: #fff;
-$primary: rgb(162, 162, 246);
-$bg: rgb(244, 244, 255);
+$whiteColor: #FFFFFF;
+$redColor: #ED1C24;
+$yellowColor: #FFDE34;
 
 // spacing
 $spacing-md: 16px;
@@ -27,9 +42,51 @@ $navbarHeight: 100px;
     }
 }
 
-// navbar color
-$navbarHomeColor: #202020;
-$navbarProductsColor: #000000;
-$navbarExpertiseColor: #E9E9E9;
-$navbarBlogColor: #E9E9E9;
-$navbarContactColor: #E9E9E9;
+// Predefined Break-points
+$mediaMaxWidth: 1260px;
+$mediaBp1Width: 960px;
+$mediaTabletWidth: 768px;
+$mediaMinWidth: 480px;
+$mediaMinWidth400: 400px;
+$mediaMinWidthLowest: 320px;
+$mediaMinWidthLowestMidLow: 220px;
+$mediaMinWidthLowestLow: 180px;
+
+
+@function translate-media-condition($c) {
+  $condMap: (
+		"screen": "only screen",
+		"print": "only print",
+		"retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+     ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
+		"<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
+		">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
+		"<bp1Width": "(max-width: #{$mediaBp1Width})",
+    ">bpTabletWidth": "(min-width: #{$mediaTabletWidth + 1})",
+		"<bpTabletWidth": "(max-width: #{$mediaTabletWidth})",
+		">minWidth": "(min-width: #{$mediaMinWidth + 1})",
+		"<minWidth": "(max-width: #{$mediaMinWidth})",
+    ">minWidth400": "(min-width: #{$mediaMinWidth400 + 1})",
+		"<minWidth400": "(max-width: #{$mediaMinWidth400})",
+    ">minWidthLowest": "(min-width: #{$mediaMinWidthLowest + 1})",
+		"<minWidthLowest": "(max-width: #{$mediaMinWidthLowest})",
+    ">minWidthLowestMidLow": "(min-width: #{$mediaMinWidthLowestMidLow + 1})",
+		"<minWidthLowestMidLow": "(max-width: #{$mediaMinWidthLowestMidLow})",
+    ">minWidthLowestLow": "(min-width: #{$mediaMinWidthLowestLow + 1})",
+		"<minWidthLowestLow": "(max-width: #{$mediaMinWidthLowestLow})"
+	);
+  @return map-get( $condMap, $c );
+}
+
+// The mdia mixin
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $op: "";
+    @if ( $query != "" ) {
+      $op: " and ";
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query}  { @content; }
+}

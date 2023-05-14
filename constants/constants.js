@@ -91,8 +91,8 @@ export const expertisePage = [
     },
     {
         type: "expertise",
-        headerArray: ["", "", "", ""],
-        bodyArray: ["", "", "", ""],
+        headerArray: ["Design", "Mobile App Dev", "E-commerce", "Graphic Ad Compaigns"],
+        bodyArray: ["Elevate your business with smart strategies", "Elevate your business with smart strategies", "Elevate your business with smart strategies", "Elevate your business with smart strategies"],
         imageArray: ["", "", "", ""],
     },
 ];
