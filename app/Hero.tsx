@@ -22,7 +22,7 @@ function Hero() {
         <div className={classes.container}>
           <Link href="/contact">
             <p className={classes.letschat}>
-              Let&sbquo;s chat!
+              Let&apos;s chat!
             </p>
           </Link>
           <div className={classes.hero_container}>
@@ -32,7 +32,7 @@ function Hero() {
               <h1 className={`${classes.rotate_text}`}>TO</h1>
               <h1 className={`${classes.hero_header}`}>LIFE.</h1>
             </div>
-            <h1 className={`${classes.hero_header__second}`}>TO LIFE.</h1>
+            <h1 className={`${classes.hero_header__alt}`}>TO LIFE.</h1>
           </div>
         </div>
       </section>
@@ -47,7 +47,7 @@ function Hero() {
             </div>
 
             <Link href="/contact">
-              <p className={classes.whoarewe_container__letschat}>Let&sbquo;s chat!</p>
+              <p className={classes.whoarewe_container__letschat}>Let&apos;s chat!</p>
             </Link>
           </div>
 

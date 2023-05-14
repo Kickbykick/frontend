@@ -112,7 +112,7 @@
     // align-items: flex-start;
     margin-left: -20px;
     // right;
-    line-height: 9.375%;
+    line-height: 100px;
     @include media( "screen", "<bp1Width" ){
         font-size: 73.1428571429px;
         line-height: 85.7142857143px;
@@ -128,8 +128,8 @@
 .hero_header{
     color: white;
     font-weight: 900;
-    font-size: 210px;//clamp(7rem, 6.25VW + 5.9375rem , 215px);
-    line-height: 246px;
+    font-size: 180px;//clamp(7rem, 6.25VW + 5.9375rem , 215px);
+    line-height: 180px;
     @include media( "screen", "<bp1Width" ){
         font-size: 120px;
         line-height: 140.571428571px;
@@ -143,16 +143,16 @@
     &__row{
         display: flex;
         align-items: center;
-        @include media( "screen", "<minWidthLowestMidLow" ){
+        @media (max-width: 248px) {
             display: none;
-        };
+        }
     }
 
     &__life{
         color: white;
         font-weight: 900;
-        font-size: 210px;
-        line-height: 246px;
+        font-size: 180px;
+        line-height: 180px;
         @include media( "screen", "<bp1Width" ){
             font-size: 120px;
             line-height: 140.571428571px;
@@ -166,13 +166,14 @@
     &__second{
         color: white;
         font-weight: 900;
-        font-size: 128px;
-        line-height: 150px;
+        font-size: 110px;
+        line-height: 100px;
         margin-left: 5px;
         @include media( "screen", "<bp1Width" ){
             font-size: 73.1428571429px;
             line-height: 85.7142857143px;
         };
+        
         @include media( "screen", "<minWidth400" ){
             font-size: 41.7959183674px;
             line-height: 48.9795918367px;
@@ -183,11 +184,11 @@
         display: none;
         color: white;
         font-size: $heroBiggerFont;
-        font-weight: 900;
-        line-height: 150px;
-        @include media( "screen", "<minWidthLowestMidLow" ){
+        font-size: 41.7959183674px;
+        line-height: 48.9795918367px;
+        @media (max-width: 248px) {
             display: block;
-        };
+        }
     }
 }
 
