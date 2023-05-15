@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 import { Metadata } from 'next';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Contact | iDDt Studios',
-  description:
-    'From the captivating city of Calgary, Alberta, we are grateful for the opportunity to collaborate with clients from around the world.',
-  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
-};
+// export const metadata: Metadata = {
+//   title: 'Contact | iDDt Studios',
+//   description:
+//     'From the captivating city of Calgary, Alberta, we are grateful for the opportunity to collaborate with clients from around the world.',
+//   keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+// };
 
 export default function Contact() {
   const {
