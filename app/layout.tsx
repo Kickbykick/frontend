@@ -3,7 +3,6 @@ import "../styles/index.scss";
 import NavBar from './NavBar'
 import Footer from './Footer'
 import classes from './../styles/Layout.module.scss';
-import Head from 'next/head'
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

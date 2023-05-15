@@ -105,6 +105,7 @@ function NavBar() {
                     <Image
                         src={(navNumber === 4) ? logo_black : logo_white}
                         alt="Picture of the author"
+                        loading="lazy"
                     />
                     </Link>
                 </div>

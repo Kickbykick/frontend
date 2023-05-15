@@ -29,16 +29,16 @@ function Product() {
       </section>
 
       <section className={classes.products__section}>
-        <IndividualProduct image={product_1.src}/>
-        <IndividualProduct image={product_2.src}/>
-        <IndividualProduct image={product_3.src}/>
-        <IndividualProduct image={product_4.src}/>
-        <IndividualProduct image={product_5.src}/>
-        <IndividualProduct image={product_6.src}/>
-        <IndividualProduct image={product_7.src}/>
-        <IndividualProduct image={product_8.src}/>
-        <IndividualProduct image={product_9.src}/>
-        <IndividualProduct image={product_10.src}/>
+        <IndividualProduct image={product_1}/>
+        <IndividualProduct image={product_2}/>
+        <IndividualProduct image={product_3}/>
+        <IndividualProduct image={product_4}/>
+        <IndividualProduct image={product_5}/>
+        <IndividualProduct image={product_6}/>
+        <IndividualProduct image={product_7}/>
+        <IndividualProduct image={product_8}/>
+        <IndividualProduct image={product_9}/>
+        <IndividualProduct image={product_10}/>
       </section>
 
       <div className='h-10'></div>
@@ -50,7 +50,7 @@ function IndividualProduct(props: any) {
   return (
     <>
       <div className={classes.products__individual_products}>
-        <img 
+        <Image 
           src={props.image} 
           alt="Product Image" 
           className={classes.products__section__image}

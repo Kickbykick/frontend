@@ -22,6 +22,7 @@ export default function ExpertisePage() {
             // objectFit="cover"
             objectPosition="center"
             className={classes.imageWrapper}
+            loading="lazy"
           />
         </div>
 
@@ -103,6 +104,7 @@ function IndividualProductExpertise(props: any) {
             src={props.image}
             className={classes.section__imageclass}
             alt="Expertise Hero"
+            loading="lazy"
           />
         </div>
       </div>
@@ -119,6 +121,7 @@ function IndividualProductExpertiseReverse(props: any) {
             src={props.image}
             alt="Expertise Hero"
             className={classes.section__imageclass}
+            loading="lazy"
           />
         </div>
         <div className={classes.section__text}>

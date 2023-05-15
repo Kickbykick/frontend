@@ -4,6 +4,7 @@ import React from 'react'
 import classes from './../styles/Clients.module.scss'
 import { clients, client_1, client_2, client_3 } from "../public";
 import dynamic from "next/dynamic"
+import Image from 'next/image'
 
 const MediaQuery = dynamic(() => import("react-responsive"), {
   ssr: false
@@ -40,7 +41,7 @@ function EsteemedClients() {
   return (
     <div className={classes.clients__middle_section}>
       <div className={classes.clients__middle_section__imagecontainer}>
-        <img src={clients.src} alt="Who are we image" className={classes.clients__middle_section__image}/>
+        <Image src={clients} alt="Who are we image" className={classes.clients__middle_section__image} loading="lazy"/>
 
         <div className={classes.clients__middle_section__tinted}></div>
 
@@ -58,11 +59,11 @@ function EsteemedClients() {
 function ClientsLogoDisplay() {
   return (
     <section className={classes.client_carousel}>
-      <img src={client_1.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_1} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
-      <img src={client_3.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_3} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
-      <img src={client_2.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_2} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
     </section>
   )
 }
@@ -70,11 +71,11 @@ function ClientsLogoDisplay() {
 function ClientsLogoDisplay2() {
   return (
     <section className={classes.client_carousel}>
-      <img src={client_1.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_1} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
-      <img src={client_3.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_3} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
-      <img src={client_2.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <Image src={client_2} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
     </section>
   )
 }

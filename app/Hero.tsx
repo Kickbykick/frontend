@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from "./../styles/Hero.module.scss";
-import { hero, who_are_we, right_arrow } from "../public";
+import { who_are_we, right_arrow } from "../public";
 import Image from 'next/image';
 import Clients from './Clients';
 import Link from 'next/link'
@@ -55,6 +55,7 @@ function Hero() {
             src={who_are_we}
             alt="Who are we image"
             className={classes.whoarewe_container__image}
+            loading="lazy"
           />
       </section>
 
@@ -109,14 +110,14 @@ function ServiceItems(props: any) {
           <h3 className={classes.serviceitem__header}>
             {props.header}
           </h3>
-          <img src={right_arrow.src} alt="Who are we image" width="30" height="30" className={classes.serviceitem__arrow}/>
+          <Image src={right_arrow} alt="Who are we image" width="30" height="30" className={classes.serviceitem__arrow} loading="lazy"/>
         </div>
 
         <div className={classes.serviceitem__body}>
           {props.body}
         </div>
 
-        <img src={right_arrow.src} alt={`${"Arrow for " + props.header}`} width="30" height="30" className={classes.serviceitem__arrowdrop}/>
+        <Image src={right_arrow} alt={`${"Arrow for " + props.header}`} width="30" height="30" className={classes.serviceitem__arrowdrop} loading="lazy"/>
       </div>
     </Link>
   )

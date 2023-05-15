@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './../../styles/blog/Blog.module.scss';
 import { blog } from "../../public";
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Blog | iDDt Studios',
@@ -15,7 +16,7 @@ function Blog() {
     <>
       <section className={classes.blog}>
         <div className={classes.blog__imagecontainer}>
-          <img src={blog.src} alt="Who are we image" className={classes.blog__image}/>
+          <Image src={blog} alt="Blog Image, we would create web design blogs that you would love" className={classes.blog__image}/>
           <div className={classes.blog__tinted}></div>
           <h1 className={classes.blog__mainheadertext}>
             Blogs.
