@@ -3,7 +3,7 @@
 .products {
     width: 100%;
     height: 100%;
-    background: black;
+    background: #202020;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -23,14 +23,13 @@
         margin-top: 4%;
         width: 90%;
         display: flex;
-        color: black;
+        color: #202020;
         flex-direction: row;
         border-bottom-width: 1px;
         justify-content: space-evenly;
 
         @include media( "screen", "<bp1Width" ){
             display: flex;
-            color: black;
             flex-direction: column;
         };
     }
@@ -56,7 +55,7 @@
             width: 100%;
             background-color: white;
             transition: transform 0.5s;
-            background: rgba(0,255,255, 0.5);
+            background: white;
             color: #A0A0A042;
             position: relative;
             filter: none;      
@@ -113,6 +112,7 @@
 
     &__header {
         font-size: $heroFont;
+        font-weight: 900;
         word-break: break-word;
         line-height: 90.69%;
         color: #FFFFFF;

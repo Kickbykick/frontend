@@ -47,7 +47,7 @@ $mediaMaxWidth: 1260px;
 $mediaBp1Width: 960px;
 $mediaTabletWidth: 768px;
 $mediaMinWidth: 480px;
-$mediaMinWidth400: 400px;
+$mediaMinWidth420: 420px;
 $mediaMinWidthLowest: 320px;
 $mediaMinWidthLowestMidLow: 220px;
 $mediaMinWidthLowestLow: 180px;
@@ -66,8 +66,8 @@ $mediaMinWidthLowestLow: 180px;
 		"<bpTabletWidth": "(max-width: #{$mediaTabletWidth})",
 		">minWidth": "(min-width: #{$mediaMinWidth + 1})",
 		"<minWidth": "(max-width: #{$mediaMinWidth})",
-    ">minWidth400": "(min-width: #{$mediaMinWidth400 + 1})",
-		"<minWidth400": "(max-width: #{$mediaMinWidth400})",
+    ">minWidth400": "(min-width: #{$mediaMinWidth420 + 1})",
+		"<minWidth400": "(max-width: #{$mediaMinWidth420})",
     ">minWidthLowest": "(min-width: #{$mediaMinWidthLowest + 1})",
 		"<minWidthLowest": "(max-width: #{$mediaMinWidthLowest})",
     ">minWidthLowestMidLow": "(min-width: #{$mediaMinWidthLowestMidLow + 1})",

@@ -1,7 +1,15 @@
 import React from 'react';
 import classes from './../../styles/products/Products.module.scss';
+import Image from 'next/image';
 import { product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10 } from "./../../public";
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Product | iDDt Studios',
+  description:
+    'iDDt Studios is a Development and Design Company.',
+  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+};
 
 function Product() {
   return (
@@ -42,7 +50,11 @@ function IndividualProduct(props: any) {
   return (
     <>
       <div className={classes.products__individual_products}>
-        <img src={props.image} alt="Product Image" className={classes.products__section__image}/>
+        <img 
+          src={props.image} 
+          alt="Product Image" 
+          className={classes.products__section__image}
+        />
       </div>
     </>
   )

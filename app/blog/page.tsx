@@ -1,6 +1,14 @@
 import React from 'react'
 import classes from './../../styles/blog/Blog.module.scss';
 import { blog } from "../../public";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | iDDt Studios',
+  description:
+    'iDDt Studios is a Development and Design Company.',
+  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+};
 
 function Blog() {
   return (

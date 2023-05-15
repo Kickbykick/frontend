@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'iDDt Studios | A Development and Design Company',
   description:
     'iDDt Studios is a Growth Agency',
+  keywords:"growth agency, web design, design, web development",
   icons: {
     icon: {
       url: "/favicon.png",
@@ -26,7 +27,6 @@ export default function RootLayout({
   }) {
     return (
       <html lang="en">
-        
         <body>
             <NavBar />
             <div className={classes.topspace}></div>
@@ -38,6 +38,3 @@ export default function RootLayout({
       </html>
     );
 }
-
-
-

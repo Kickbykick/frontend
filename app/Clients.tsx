@@ -2,7 +2,7 @@
 
 import React from 'react'
 import classes from './../styles/Clients.module.scss'
-import { clients, apple, client_1, client_2, client_3 } from "../public";
+import { clients, client_1, client_2, client_3 } from "../public";
 import dynamic from "next/dynamic"
 
 const MediaQuery = dynamic(() => import("react-responsive"), {
@@ -62,7 +62,7 @@ function ClientsLogoDisplay() {
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
       <img src={client_3.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
-      <img src={client_1.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
+      <img src={client_2.src} alt="Client Logo" className={classes.clients__middle_section__icons}/>
     </section>
   )
 }

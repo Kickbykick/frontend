@@ -2,13 +2,18 @@
 
 import React, { useState } from 'react';
 import classes from './../../styles/contact/Contact.module.scss';
-// import 'dotenv/config';
-// import { EmailParams } from "mailersend";
-// import { MailerSendObj, SentFrom, Recipients, EmailParamsObj }  from './../../lib/mailersend'
-import { sendEmail } from "../../lib/email";
 import { useForm } from 'react-hook-form';
+import { Metadata } from 'next';
+import Link from 'next/link'
 
-function Contact() {
+export const metadata: Metadata = {
+  title: 'Contact | iDDt Studios',
+  description:
+    'From the captivating city of Calgary, Alberta, we are grateful for the opportunity to collaborate with clients from around the world.',
+  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+};
+
+export default function Contact() {
   const {
     register,
     handleSubmit,
@@ -59,10 +64,12 @@ function Contact() {
             Say Hello
           </h3>
           <p className={`${classes.contact__subtopic__sayhellobody}`}>
-            Business@iddtstudios.com
+            <Link href="mailto:Business@iddtstudios.com">Business@iddtstudios.com</Link>
           </p>
           <p className={`${classes.contact__subtopic__sayhellobody}`}>
-            Instagram | Linkedin | Facebook
+          <Link className= "underline" href="https://www.instagram.com/iddt.studios/">Instagram</Link> 
+            <span>{" | "}</span>
+          <Link className= "underline" href="https://www.linkedin.com/company/iddt-studios/">Linkedin</Link>
           </p>
         </div>
       </div>
@@ -243,5 +250,3 @@ function ContactCheckboxList(props: any) {
 //     </div>
 //   )
 // }
-
-export default Contact

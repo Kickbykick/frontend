@@ -5,10 +5,18 @@ import classes from './../../styles/expertise/Expertise.module.scss';
 import { expertise_hero, expertise_2, expertise_3, expertise_4, expertise_5 } from "../../public";
 import Image from 'next/image'
 import dynamic from "next/dynamic"
+import { Metadata } from 'next';
 
 const MediaQuery = dynamic(() => import("react-responsive"), {
   ssr: false
 })
+
+export const metadata: Metadata = {
+  title: 'Expertise | iDDt Studios',
+  description:
+    'iDDt Studios is a Development and Design Company.',
+  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+};
 
 function Expertise() {
   return (

@@ -30,7 +30,7 @@ function NavBar() {
 
     if(pathname === "/"){
         navNumber = 0;
-        backgroundColor = "#202020";
+        backgroundColor = "#000000";
         textColor = "#FFFFFF";
     } else if(pathname === "/products"){
         navNumber = 1;

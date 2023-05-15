@@ -9,7 +9,7 @@ import who_are_we from "./images/who_are_we.jpg";
 import right_arrow from "./icons/right_arrow.svg";
 import clients from "./images/clients.jpg";
 import apple from "./icons/apple.png"
-import blog from "./images/blog.jpg";
+import blog from "./images/blog/blog.jpg";
 import expertise_hero from "./images/expertise/expertise_page_hero_image.jpg"
 import expertise_2 from "./images/expertise/expertise_website_design.jpg"
 import expertise_3 from "./images/expertise/expertise_mobile_application_development.jpg"

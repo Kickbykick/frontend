@@ -25,15 +25,17 @@
 .heroWrapper {
     position: relative;
     height: max(100vh, 760px);
+    background: black;
+
     @include media( "screen", "<minWidthLowest" ){
         height: max(100vh, 1000px);
     };
-    @include media( "screen", "<minWidthLowestMidLow" ){
-        height: max(100vh, 1200px);
-    };
-    @include media( "screen", "<minWidthLowestLow" ){
-        height: max(100vh, 1600px);
-    };
+    // @include media( "screen", "<minWidthLowestMidLow" ){
+    //     height: max(100vh, 1200px);
+    // };
+    // @include media( "screen", "<minWidthLowestLow" ){
+    //     height: max(100vh, 1600px);
+    // };
 }
 
 .servicesheroWrapper {
@@ -70,7 +72,7 @@
 
 .letschat {
     font-weight: 700;
-    font-size: clamp(28px, 1.6vw + 0.525rem , 45px);
+    font-size: 20px;
     line-height: 23px;
     color: red;
     height: 100%;
@@ -99,6 +101,12 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
+    @include media( "screen", "<bp1Width" ){
+        padding-left: 11.76470588235294px;
+    };
+    @include media( "screen", "<minWidth400" ){
+        padding-left: 6.920415224913495px;
+    };
 }
 
 .rotate_text{
@@ -114,29 +122,56 @@
     // right;
     line-height: 100px;
     @include media( "screen", "<bp1Width" ){
-        font-size: 73.1428571429px;
+        font-size: 71.76470588235294px;
         line-height: 85.7142857143px;
         margin-left: -11.4285714286px;
     };
     @include media( "screen", "<minWidth400" ){
-        font-size: 41.7959183674px;
+        font-size: 42.21453287197232px;
         line-height: 48.9795918367px;
         margin-left: -6.53061224491px;
+    };
+}
+
+.lifemarginleft{
+    margin-left: -14px;
+    @include media( "screen", "<bp1Width" ){
+        margin-left: -8.235294117647059px;
+    };
+    @include media( "screen", "<minWidth400" ){
+        margin-left: -4.844290657439446px;
+    };
+}
+.hero_header_life{
+    color: white;
+    font-weight: 900;
+    font-size: 225px;
+    line-height: 180px;
+    @include media( "screen", "<bp1Width" ){
+        font-size: 132.3529411764706px;
+        line-height: 140.571428571px;
+    };
+    @include media( "screen", "<minWidth400" ){
+        font-size: 77.85467128027682px;
+        line-height: 80.326530612px;
     };
 }
 
 .hero_header{
     color: white;
     font-weight: 900;
-    font-size: 180px;//clamp(7rem, 6.25VW + 5.9375rem , 215px);
+    font-size: 210px;//clamp(7rem, 6.25VW + 5.9375rem , 215px);
     line-height: 180px;
+    margin-bottom: 14px;
     @include media( "screen", "<bp1Width" ){
-        font-size: 120px;
+        font-size: 123.5294117647059px;
         line-height: 140.571428571px;
+        margin-bottom: 0px;
     };
     @include media( "screen", "<minWidth400" ){
-        font-size: 68.5714285714px;
+        font-size: 72.66435986159171px;
         line-height: 80.326530612px;
+        margin-bottom: 4.844290657439446px;
     };
 
 
@@ -151,14 +186,14 @@
     &__life{
         color: white;
         font-weight: 900;
-        font-size: 180px;
+        font-size: 210px;
         line-height: 180px;
         @include media( "screen", "<bp1Width" ){
-            font-size: 120px;
+            font-size: 123.5294117647059px;
             line-height: 140.571428571px;
         };
         @include media( "screen", "<minWidth400" ){
-            font-size: 68.5714285714px;
+            font-size: 72.66435986159171px;
             line-height: 80.326530612px;
         };
     }
@@ -166,17 +201,20 @@
     &__second{
         color: white;
         font-weight: 900;
-        font-size: 110px;
+        font-size: 128px;
         line-height: 100px;
         margin-left: 5px;
+        margin-bottom: 22px;
         @include media( "screen", "<bp1Width" ){
-            font-size: 73.1428571429px;
+            font-size: 75.29411764705882px;
             line-height: 85.7142857143px;
+            margin-bottom: 0px;
         };
-        
         @include media( "screen", "<minWidth400" ){
-            font-size: 41.7959183674px;
+            font-size: 44.29065743944636px;
             line-height: 48.9795918367px;
+            margin-bottom: 7.612456747404844px;
+            margin-left: 2px;
         };
     }
 
@@ -238,7 +276,7 @@
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
-        padding-left: 42px;
+        padding-left: 20px;
         padding-right: 100px;
         background: linear-gradient(to left, #bbbbbb59 0%, #fff 10%, #fff 80%);
     

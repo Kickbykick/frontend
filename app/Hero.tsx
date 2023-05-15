@@ -10,13 +10,13 @@ function Hero() {
     <>
       <section className={classes.heroWrapper}>
         <div className={classes.imageWrapper}>
-          <Image 
+          {/* <Image 
             src={hero}
             alt="Expertise Hero"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
-          />
+          /> */}
         </div>
 
         <div className={classes.container}>
@@ -30,7 +30,7 @@ function Hero() {
             <h1 className={`${classes.hero_header__second}`}>IDEATION</h1>
             <div className={classes.hero_header__row}>
               <h1 className={`${classes.rotate_text}`}>TO</h1>
-              <h1 className={`${classes.hero_header}`}>LIFE.</h1>
+              <h1 className={`${classes.hero_header_life} ${classes.lifemarginleft}`}>LIFE.</h1>
             </div>
             <h1 className={`${classes.hero_header__alt}`}>TO LIFE.</h1>
           </div>
