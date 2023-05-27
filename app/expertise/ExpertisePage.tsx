@@ -32,7 +32,7 @@ export default function ExpertisePage() {
           <div className={classes.container__text}>
             <h1 className={classes.expertise_pitch__header}>Fix You Sessions</h1>
             <p className={classes.expertise_pitch__body}>
-              At our modern design and development company, our ethos is rooted in the pursuit of excellence, innovation, and user-centricity. We believe in pushing boundaries, embracing emerging technologies, and continuously evolving our craft to deliver transformative digital experiences. With a deep understanding of our clients' goals and their target audience, we strive to create intuitive, visually stunning, and functionally robust solutions that not only meet but exceed expectations.
+              At our modern design and development company, our ethos is rooted in the pursuit of excellence, innovation, and user-centricity. We believe in pushing boundaries, embracing emerging technologies, and continuously evolving our craft to deliver transformative digital experiences. With a deep understanding of our clients&apos; goals and their target audience, we strive to create intuitive, visually stunning, and functionally robust solutions that not only meet but exceed expectations.
             </p>
           </div>
         </div>
