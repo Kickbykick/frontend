@@ -55,6 +55,7 @@ function IndividualProduct(props: any) {
           src={props.image} 
           alt="Product Image" 
           className={classes.products__section__image}
+          priority
         />
       </Link>
     </>

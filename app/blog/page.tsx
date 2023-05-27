@@ -16,7 +16,11 @@ function Blog() {
     <>
       <section className={classes.blog}>
         <div className={classes.blog__imagecontainer}>
-          <Image src={blog} alt="Blog Image, we would create web design blogs that you would love" className={classes.blog__image}/>
+          <Image src={blog} 
+            alt="Blog Image, we would create web design blogs that you would love" 
+            className={classes.blog__image}
+            priority
+          />
           <div className={classes.blog__tinted}></div>
           <h1 className={classes.blog__mainheadertext}>
             Blogs.

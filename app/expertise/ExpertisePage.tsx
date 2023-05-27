@@ -22,7 +22,7 @@ export default function ExpertisePage() {
             // objectFit="cover"
             objectPosition="center"
             className={classes.imageWrapper}
-            loading="lazy"
+            priority
           />
         </div>
 
@@ -107,6 +107,7 @@ function IndividualProductExpertise(props: any) {
             className={classes.section__imageclass}
             alt="Expertise Hero"
             loading="lazy"
+            // priority
           />
         </div>
       </div>
