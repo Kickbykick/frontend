@@ -3,6 +3,7 @@ import classes from './../../styles/products/Products.module.scss';
 import Image from 'next/image';
 import { product_1, product_2, product_3, product_4, product_5, product_6, product_7, product_8, product_9, product_10 } from "./../../public";
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Product | iDDt Studios',
@@ -29,8 +30,8 @@ function Product() {
       </section>
 
       <section className={classes.products__section}>
-        <IndividualProduct image={product_1}/>
-        <IndividualProduct image={product_2}/>
+        <IndividualProduct image={product_1} href={"https://aworanapp.com/#/"}/>
+        <IndividualProduct image={product_2} href={"https://apps.apple.com/app/id1551892149"}/>
         <IndividualProduct image={product_3}/>
         <IndividualProduct image={product_4}/>
         <IndividualProduct image={product_5}/>
@@ -49,13 +50,13 @@ function Product() {
 function IndividualProduct(props: any) {
   return (
     <>
-      <div className={classes.products__individual_products}>
+      <Link href= {props.href ? props.href : "/products"} className={classes.products__individual_products} >
         <Image 
           src={props.image} 
           alt="Product Image" 
           className={classes.products__section__image}
         />
-      </div>
+      </Link>
     </>
   )
 }

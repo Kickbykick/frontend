@@ -152,7 +152,15 @@ function NavBar() {
                 </nav>
                 
                 {/* Used for Space between, empty 3rd element */}
-                <div></div>
+                <Link href="/contact">
+                    <p className={classes.letschat} 
+                        style={(navNumber !== 0) ? {
+                            color: "#ED1C24",
+                        } : {}}
+                    >
+                        Let&apos;s chat!
+                    </p>
+                </Link>
                 
                 <div 
                     className={`${classes.navbar__content__toggle}`}

@@ -141,6 +141,18 @@
     }
 }
 
+.letschat {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    width: 120px;
+
+    @include media( "screen", "<bpTabletWidth" ){
+        display: none;
+    };
+}
+
 .overlay {
     height: 0%;
     width: 100%;

@@ -1,30 +1,69 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import classes from "./../styles/Hero.module.scss";
-import { who_are_we, right_arrow } from "../public";
+import { hero, hero_small1, hero_small2, hero_small3, who_are_we, right_arrow } from "../public";
 import Image from 'next/image';
 import Clients from './Clients';
 import Link from 'next/link'
 
+
+
 function Hero() {
+  const [count, setCount] = useState(0);
+  const [blackBoxWidth, setBlackBoxWidth] = useState(false);
+
+  setTimeout(() => {
+    setBlackBoxWidth(true)
+    // console.log(blackBoxWidth);
+  }, 3000);
+  // setInterval(() => {
+  //   if(count >= 3 ){
+  //     setCount(0);
+  //   } else {
+  //     setCount(count + 1);
+  //   }
+  // }, 1000);
+
   return (
     <>
       <section className={classes.heroWrapper}>
         <div className={classes.imageWrapper}>
-          {/* <Image 
+          <Image 
             src={hero}
             alt="Expertise Hero"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
-          /> */}
+          />
         </div>
 
-        <div className={classes.container}>
-          <Link href="/contact">
+        <div className={`${classes.container} ${classes.fadein}`}>
+          <div className={classes.containerLeft}>
+            <Image 
+              src={hero_small1}
+              alt="Level1 Overlay"
+              width={410}
+              className={`${classes.imageLevel} ${classes.imageLevel1}`}>
+            </Image>
+            <Image 
+              src={hero_small2}
+              alt="Level2 Overlay"
+              width={410}
+              className={`${classes.imageLevel} ${classes.imageLevel2}`}>
+            </Image>
+            <Image 
+              src={hero_small3}
+              alt="Level3 Overlay"
+              width={410}
+              className={`${classes.imageLevel} ${classes.imageLevel3}`}>
+            </Image>
+          </div>
+          {/* <Link href="/contact">
             <p className={classes.letschat}>
               Let&apos;s chat!
             </p>
-          </Link>
+          </Link> */}
           <div className={classes.hero_container}>
             <h1 className={`${classes.hero_header}`}>FROM</h1>
             <h1 className={`${classes.hero_header__second}`}>IDEATION</h1>
@@ -33,8 +72,15 @@ function Hero() {
               <h1 className={`${classes.hero_header_life} ${classes.lifemarginleft}`}>LIFE.</h1>
             </div>
             <h1 className={`${classes.hero_header__alt}`}>TO LIFE.</h1>
+
+            <div className={`${classes.rightblackbox} ${blackBoxWidth ? classes.rightblacktransition : {}}`}>
+              <div className={`${classes.rightblacktransitiontest}`}>
+
+              </div>
+            </div>
           </div>
         </div>
+
       </section>
 
       <section  className={classes.whoarewe_container}>

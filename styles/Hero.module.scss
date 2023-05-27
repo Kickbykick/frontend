@@ -28,7 +28,7 @@
     background: black;
 
     @include media( "screen", "<minWidthLowest" ){
-        height: max(100vh, 1000px);
+        height: max(100vh, 760px);
     };
     // @include media( "screen", "<minWidthLowestMidLow" ){
     //     height: max(100vh, 1200px);
@@ -37,6 +37,7 @@
     //     height: max(100vh, 1600px);
     // };
 }
+$maxImagesNumber: 3;
 
 .servicesheroWrapper {
     position: relative;
@@ -44,24 +45,147 @@
     height: 100%;
 }
 
-
 .imageWrapper {
     z-index: -1;
     width: 100%;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fade1 {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.imageLevel1 {
+	animation-name: fade;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+	animation-direction: alternate-reverse;
+    animation-delay: 2s;
+}
+
+.imageLevel2 {
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+    animation-delay: 4s;
+	animation-direction: alternate-reverse;
+}
+
+.imageLevel3 {
+	animation-name: fade;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+    animation-delay: 8s;
+	animation-direction: alternate-reverse;
+}
+
+.fadein {
+   opacity:0;  /* make things invisible upon start */
+   animation:fadeIn ease-in 1;
+   animation-fill-mode:forwards;
+   animation-duration:1.4s;
+}
+ 
+.fadein.delayed {
+  animation-delay: 1.4s;
+}
+
+.containerLeft {
+    margin-left: 30px;
+    // margin-right: 500px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    // position: absolute;
+
+    @include media( "screen", "<minWidth" ){
+        margin-left: 0px;
+        justify-content: center;
+    };
+
+    .imageLevel{
+        z-index: 3;
+        position: absolute;
+    }
+
+    @for $i from $maxImagesNumber through 1 {
+    :nth-child(#{ $i }) {
+        z-index: #{ $maxImagesNumber + ($i - 1) };
+        
+        // left: #{ ($i - 1) * 30 }px;
+    }
+    }
+}
+
+.displayImage{
+    display: none;
+}
+
+.rightblackbox{
+    height: 100px;
+    width:0px;
+    z-index: 2;
+    position: absolute;
+    background: black;
+    // left: 37rem;
+    top: 26rem;
+    right: -23.7rem;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+
+    @include media( "screen", "<fourkwidth" ){
+        display: none;
+    };
+}
+
+.rightblacktransition{
+    width: 441px;
 }
   
 .container {
     position: relative;
     display: flex;
-    // align-items: center;
+    align-items: center;
     margin: 0 auto;
+    // width: 80%;
     height: 100%;
     justify-content: center;
     align-items: center;
 
-    @include media( "screen", "<bp1Width" ){
-        flex-direction: column
-    };
+    // @include media( "screen", "<bp1Width" ){
+    //     flex-direction: column
+    // };
     // @include media( "screen", "<minWidthLowest" ){
     //     top: 10%;
     // };
@@ -96,10 +220,15 @@
 }
 
 .hero_container{
-    border-left: 3px solid red;
+    border-left: 12px solid red;
     padding-left: 20px;
-    margin-left: 20px;
+    // margin-left: 35%;
+    // left: 3%;
+    // margin: 0 auto;
+    // width: 100%;
+    z-index: 5;
     display: flex;
+    position: absolute;
     flex-direction: column;
     @include media( "screen", "<bp1Width" ){
         padding-left: 11.76470588235294px;
@@ -178,6 +307,8 @@
     &__row{
         display: flex;
         align-items: center;
+        z-index: 5;
+
         @media (max-width: 248px) {
             display: none;
         }

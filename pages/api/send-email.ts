@@ -21,18 +21,4 @@ export default async function handler(
     console.error(error);
     res.status(400).json({ message: error, success: false });
   }
-  
-  
-
-  // switch (requestMethod) {
-  //   case 'POST':
-  //     res.send('Hello World!');
-  //     // res.status(200).json({ message: `You submitted the following data: ${body}` })
-  //   // default:
-  //   //   res.status(200).json({ message: 'Welcome to API Routes!'})
-  // }
-
- 
-
-  // return res.status(200).json({ message: "Email sent successfully" });
 }

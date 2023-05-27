@@ -43,6 +43,7 @@ $navbarHeight: 100px;
 }
 
 // Predefined Break-points
+$fourkwidth: 1440px;
 $mediaMaxWidth: 1260px;
 $mediaBp1Width: 960px;
 $mediaTabletWidth: 768px;
@@ -58,7 +59,9 @@ $mediaMinWidthLowestLow: 180px;
 		"screen": "only screen",
 		"print": "only print",
 		"retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
-     ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
+    ">fourkwidth": "(min-width: #{$fourkwidth + 1})",
+		"<fourkwidth": "(max-width: #{$fourkwidth})", 
+    ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
 		"<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
 		">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
 		"<bp1Width": "(max-width: #{$mediaBp1Width})",
