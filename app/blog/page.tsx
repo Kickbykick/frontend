@@ -14,11 +14,12 @@ export const metadata: Metadata = {
 function Blog() {
   return (
     <>
-      <section className={classes.blog}>
+      <section className={`${classes.blog}`}>
         <div className={classes.blog__imagecontainer}>
           <Image src={blog} 
             alt="Blog Image, we would create web design blogs that you would love" 
             className={classes.blog__image}
+            width={1080} height={1920}
             priority
           />
           <div className={classes.blog__tinted}></div>

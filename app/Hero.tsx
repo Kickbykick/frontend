@@ -28,13 +28,14 @@ function Hero() {
   return (
     <>
       <section className={classes.heroWrapper}>
-        <div className={classes.imageWrapper}>
+        <div className={`${classes.imageWrapper} ${classes.fadein}`}>
           <Image 
             src={hero}
             alt="Expertise Hero"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority
           />
         </div>
 
