@@ -48,7 +48,7 @@ function EsteemedClients() {
         <div className={classes.clients__middle_section__textonimage}>
           <hr className={`${classes.clients__middle_section__horizontalline}`}></hr>
           <h1 className={classes.clients__middle_section__header}>Our Esteemed Clients</h1>
-          <p className={classes.clients__middle_section__body}>Elevate your business with smart strategies and innovative visual solutions to create a cohesive brand experience perfectly tailored to your unique clientele. Our attention to detail, modern aesthetic and clear execution bring your brand and vision to life.</p>
+          <p className={classes.clients__middle_section__body}>With our dedication to quality, innovation, and customer satisfaction, we strive to build long-lasting relationships with each and every one of our esteemed clients. Your trust in our expertise and commitment to excellence is what drives us to continuously improve and deliver outstanding results.</p>
           <hr className={`${classes.clients__middle_section__horizontalline}`}></hr>
         </div>
       </div>
