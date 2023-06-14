@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Blog | iDDt Studios',
   description:
     'iDDt Studios is a Development and Design Company.',
-  keywords:"growth agency, web design, design, web development, calgary, web design calgary",
+  keywords:"growth agency, web design, design, web development, calgary, web design calgary, web design winnipeg, web development winnipeg, winnipeg, iddtstudios, iddt, studios, web",
 };
 
 function Blog() {

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import classes from './../../styles/contact/Contact.module.scss';
 import { useForm } from 'react-hook-form';
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function ContactPage() {
   const {
@@ -16,13 +16,13 @@ export default function ContactPage() {
   const [disableButton, setDisableButton] = useState(false);
 
   const onSubmit = async (data: any) => {
+    setDisableButton(true);
     console.log(data);
 
     const response:Response = await fetch("/api/send-email", {
       method: "POST",
       body: JSON.stringify(data),
     });
-    setDisableButton(true);
     setTimeout(() => setDisableButton(false), 5000);
 
     if(response.status == 200) {
@@ -147,7 +147,7 @@ export default function ContactPage() {
             />
 
             <div className='flex flex-col mb-7'>
-              <label className={`${classes.contact__contactform__text} mb-7`}>Tell us a bit about your project</label>
+              <p className={`${classes.contact__contactform__text} mb-7`}>Tell us a bit about your project</p>
               <textarea className={classes.contact__contactform__textarea} 
                 {...register("about", {
                   required: "Please tell us about your project",

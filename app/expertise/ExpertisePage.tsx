@@ -22,6 +22,7 @@ export default function ExpertisePage() {
             // objectFit="cover"
             objectPosition="center"
             className={classes.imageWrapper}
+            width={1080} height={1920}
             priority
           />
         </div>

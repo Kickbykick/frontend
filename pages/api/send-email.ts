@@ -12,7 +12,7 @@ export default async function handler(
     console.log(req.body);
 
     await sendEmail({
-      to: "business@iddtstudios.com",
+      to: "iddtstudiosss@gmail.com",
       subject: "Welcome to iDDt Studios",
       html: req.body,
     });
