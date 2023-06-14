@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", "Helvetica";
+}
+
+#root {
+  height: 100%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: clamp(3rem, 3.125VW + 0.9375rem, 80px);
+  line-height: 56px;
+  font-style: normal;
+  word-break: break-word;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: clamp(40px, 1.6vw + 1.125rem, 55px);
+  line-height: 56px;
+  font-style: normal;
+}
+
+p {
+  font-size: clamp(18px, 0.6vw + 0.5rem, 24px);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 162.69%;
+  letter-spacing: -0.01em;
+}/*# sourceMappingURL=index.css.map */
