@@ -90,7 +90,7 @@ function Hero() {
               <h1 className={`${classes.whoarewe_container__header} mb-3`}>
                 Who are we?
               </h1>
-              <p className={classes.whoarewe_container__body}>At our core, we are driven by a passion for creating exceptional user experiences. We specialize in crafting cutting-edge solutions that seamlessly blend captivating design with robust functionality. Empowering businesses to thrive in the digital age and connect with their audiences in meaningful and impactful ways is our.</p>
+              <p className={classes.whoarewe_container__body}>At our core, we are driven by a passion for creating exceptional user experiences. We specialize in crafting cutting-edge solutions that seamlessly blend captivating design with robust functionality. Empowering businesses to thrive in the digital age and connect with their audiences in meaningful and impactful ways.</p>
             </div>
 
             <Link href="/contact">
