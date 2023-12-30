@@ -18,11 +18,14 @@ export default function ExpertisePage() {
           <Image 
             src={expertise_hero}
             alt="Expertise Hero"
-            layout="fill"
+            // layout="fill"
             // objectFit="cover"
-            objectPosition="center"
+            // objectPosition="center"
+            fill
+            // style={{objectFit:"cover"}}
             className={classes.imageWrapper}
-            width={1080} height={1920}
+            // width={1080} 
+            // height={1920}
             priority
           />
         </div>

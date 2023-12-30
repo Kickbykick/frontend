@@ -26,7 +26,7 @@ import product_10 from "./images/product/product_10_website_design_chicken_can.w
 import client_1 from "./images/home/client_1.png"
 import client_2 from "./images/home/client_2.png"
 import client_3 from "./images/home/client_3.png"
-
+import client_4 from "./images/home/client_4.png"
 
 export {
     logo_white,
@@ -56,5 +56,6 @@ export {
     product_10,
     client_1,
     client_2,
-    client_3
+    client_3,
+    client_4
   };

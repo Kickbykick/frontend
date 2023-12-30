@@ -2,7 +2,7 @@
 
 import React from 'react'
 import classes from './../styles/Clients.module.scss'
-import { clients, client_1, client_2, client_3 } from "../public";
+import { clients, client_1, client_2, client_3, client_4 } from "../public";
 import dynamic from "next/dynamic"
 import Image from 'next/image'
 
@@ -59,7 +59,7 @@ function EsteemedClients() {
 function ClientsLogoDisplay() {
   return (
     <section className={classes.client_carousel}>
-      <Image src={client_1} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
+      <Image src={client_4} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
       <Image src={client_3} alt="Client Logo" className={classes.clients__middle_section__icons} loading="lazy"/>
       <hr className='bg-black h-0.5 mt-10 w-full'></hr>
